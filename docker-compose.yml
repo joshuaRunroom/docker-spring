@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: java-spring
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sh ./docker-entrypoint.sh
+    volumes:
+        - .:/app
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    ports:
+      - 8080:8443
+
