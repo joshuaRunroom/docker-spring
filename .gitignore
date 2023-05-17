@@ -34,3 +34,5 @@ build/
 
 ### VS Code ###
 .vscode/
+.m2
+.bash_history
